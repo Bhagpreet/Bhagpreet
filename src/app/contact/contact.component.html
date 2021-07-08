@@ -1,0 +1,19 @@
+<div [@slideInOut]="isStarting ? 'enter' : 'leave'" class='main-div'>
+    <mat-card class="example-card justify-content-center shadow-lg col-11">
+            <mat-card-header class='justify-content-center'>
+                <mat-card-title>Contact Info</mat-card-title>
+            </mat-card-header>
+            <mat-card-actions class='mid'>
+                <!-- <p class='card-text' id='phone'>Mobile Phone: 
+                    <button matTooltip="Copy phone number" class='flow btn btn-link' [cdkCopyToClipboard]="phone">
+                        <i class="fa fa-clone"></i>
+                    </button>
+                </p> -->
+                <p class='card-text' id='email'>E-mail: 
+                    <button matTooltip="Copy email" class='flow btn btn-link' [cdkCopyToClipboard]="email">
+                        <i class="fa fa-clone" ></i> bb86029@gmail.com
+                    </button>
+                </p>
+            </mat-card-actions>
+    </mat-card>
+</div>

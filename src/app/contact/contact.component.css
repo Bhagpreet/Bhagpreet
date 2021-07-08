@@ -1,0 +1,17 @@
+
+.mid{
+    display: flex;
+    justify-content: center;
+}
+
+.main-div{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flow{
+    margin: auto;
+    border-radius: 50%;
+}

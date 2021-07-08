@@ -1,0 +1,41 @@
+<p>
+<div [@slideInOut]="isStarting ? 'enter' : 'leave'">
+    <h2 class='text-center'>Prices can vary depending on topics covered in tutoring sessions.</h2>
+</div>
+<table mat-table [@slideInOut]="isStarting ? 'enter' : 'leave'" [dataSource]="tutoring_info" class="mat-elevation-z8 table-striped">
+        <ng-container matColumnDef="subject">  
+          <th mat-header-cell *matHeaderCellDef><h2 class='header'>Subject</h2></th>
+          <td mat-cell *matCellDef="let info"> 
+              {{info.subject}} 
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="rate">
+          <th mat-header-cell *matHeaderCellDef><h2 class='header'>Rates</h2></th>
+          <td mat-cell *matCellDef="let info"> 
+              {{info.rate}} 
+          </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<div [@slideInOut]="isStarting ? 'enter' : 'leave'" class='main-div'>
+    <mat-card class="example-card justify-content-center shadow-lg col-11">
+            <mat-card-header class='justify-content-center'>
+                <mat-card-title>Free Programming Resources</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p class='card-text'>
+                    Before you consider paying for tutoring sessions, you can also take advantage of these free programming resources. If you are 
+                    still looking for more help or clarification on these subjects, please check out my contact tab where you can email me your 
+                    inquiries! Thank you!
+                </p>
+            </mat-card-content>
+            <mat-card-actions class='mid'>
+                <a mat-raised-button mat-stroked-button href='https://www.freecodecamp.org/' target='_blank'>FreeCodeCamp</a>
+                <a mat-raised-button mat-stroked-button style='margin-left:16px;' href='https://www.codecademy.com/' target='_blank'>Codecademy</a>
+                <a mat-raised-button mat-stroked-button href='https://www.udacity.com/course/introduction-to-python--ud1110' target='_blank'>Udacity Python Intro</a>
+            </mat-card-actions>
+    </mat-card>
+</div>
