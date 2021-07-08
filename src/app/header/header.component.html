@@ -1,4 +1,4 @@
-<nav style='margin-top:0%;' class='navbar navbar-expand-lg navbar-dark bg-dark'>
+<nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
     <h2 class='navbar-brand name' style='color:white;'>Bhagpreet Brar</h2>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerHeader" aria-controls="navbarTogglerHeader" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -9,7 +9,7 @@
                 <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/resume">Resume</a>
+                <a class="nav-link" onclick='closeNavBar()' href="https://bhagpreet.github.io/Bhagpreet/assets/pdf/Resume.pdf" target='_blank'>Resume</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/tutoring">Tutoring</a>
@@ -23,3 +23,15 @@
         </ul>
     </div>
 </nav>
+
+<script>
+// Close Navbar when clicked outside
+$(window).on('click', function(event){
+    // element over which click was made
+    var clickOver = $(event.target)
+    if ($('.navbar .navbar-toggler').attr('aria-expanded') == 'true' && clickOver.closest('.navbar').length === 0) {
+        // Click on navbar toggler button
+        $('button[aria-expanded="true"]').click();
+    }
+});
+</script>
