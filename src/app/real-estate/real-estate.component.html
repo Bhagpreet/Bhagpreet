@@ -1,4 +1,4 @@
-<div class='mt-sm-20' [@slideInOut]="isStarting ? 'enter' : 'leave'" class='main-div'>
+<div class='read' [@slideInOut]="isStarting ? 'enter' : 'leave'" class='main-div'>
         <mat-card class="example-card shadow-lg col-11">
             <mat-card-header class='justify-content-center'>
                 <mat-card-title>Real Estate Investing</mat-card-title>
@@ -18,4 +18,17 @@
             </mat-card-content>
         </mat-card>
     </div>
-    
+
+<style>
+    @media only screen and (min-width: 320px) {
+        .read {
+          margin-top: 1000px;
+        }
+      }
+
+      @media only screen and (min-width: 768px) {
+        .read {
+          margin-left: 0px;
+        }
+      }
+</style>
