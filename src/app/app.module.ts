@@ -16,6 +16,7 @@ import { MatButtonModule, MatButton } from '@angular/material/button';
 import { MatRippleModule, MatRipple } from '@angular/material/core';
 import { RippleOnHoverDirective } from './directives/ripple-on-hover.directive';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatTableModule,
     MatButtonModule,
     MatRippleModule,
-    MatTooltipModule
+    PdfViewerModule
   ],
   providers: [MatRipple],
   bootstrap: [AppComponent]
