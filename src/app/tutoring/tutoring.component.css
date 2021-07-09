@@ -22,3 +22,7 @@ a:hover{
 .header{
     margin: auto;
 }
+
+.text-responsive {
+  font-size: calc(0.8vw + 0.8vh);
+}
